@@ -44,27 +44,28 @@ public class Stackdemo {
     public static void main(String[] args) {
         int ch;
         Stack stk = new Stack();
-        Scanner in = new Scanner(System.in);
-        while(true){
-            System.out.println("Stack operations Demo");
-            System.out.println("1: push\n 2: pop\n 3: Display\n 4:Exit");
-            ch=in.nextInt();
-            switch(ch){
-                case 1: System.out.println("Enter the item to be"+" pushed "+"into the stack:");
-                int item = in.nextInt();
-                stk.push(item);
-                break;
+        try (Scanner in = new Scanner(System.in)) {
+            while(true){
+                System.out.println("Stack operations Demo");
+                System.out.println("1: push\n 2: pop\n 3: Display\n 4:Exit");
+                ch=in.nextInt();
+                switch(ch){
+                    case 1: System.out.println("Enter the item to be"+" pushed "+"into the stack:");
+                    int item = in.nextInt();
+                    stk.push(item);
+                    break;
 
-                case 2: stk.pop();
-                break;
+                    case 2: stk.pop();
+                    break;
 
-                case 3: stk.display();
-                break;
+                    case 3: stk.display();
+                    break;
 
-                case 4: System.exit(0);
+                    case 4: System.exit(0);
 
-                default:
-                System.out.println("Invalid choice!");
+                    default:
+                    System.out.println("Invalid choice!");
+                }
             }
         }
     }
