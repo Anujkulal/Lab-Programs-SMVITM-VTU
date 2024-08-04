@@ -1,0 +1,29 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\begin{document}
+\begin{center}
+\textbf{\large Side-by-Side Figures Examples}\\
+\end{center}
+
+\section*{Figures}
+\begin{figure}[h!]
+\centering
+\subfloat[SMVITM]{%
+\includegraphics[width=0.35\textwidth]
+{images/smvitm.jpg}% 
+\label{fig:fig1}%
+}
+\hspace{0.05\textwidth}
+\subfloat[VTU]{%
+\includegraphics[width=0.35\textwidth]
+{images/vtu.png}%
+\label{fig:fig2}%
+}
+
+\caption{Side-by-Side figures using subfig package}
+\label{fig:sidebyside}
+\end{figure}
+\end{document}
