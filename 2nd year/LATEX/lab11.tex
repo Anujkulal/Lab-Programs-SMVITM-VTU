@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+
+\begin{document}
+\begin{algorithm}[H]
+\caption{Euclid's Algorithm}
+\KwIn{Two non-negative integers $a$ and $b$}
+\KwOut{$\gcd(a,b)$}
+
+\While{$b \neq 0$}{
+$r \gets ab$\;
+$a \gets b$\;
+$b \gets r$\;
+}
+\Return $a$\;
+\end{algorithm}
+\end{document}
