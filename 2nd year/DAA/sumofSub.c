@@ -22,8 +22,8 @@ void sumofsub(int m, int k, int r){
     else if((m+s[k]+s[k+1]) <=d){
         sumofsub(m+s[k], k+1, r-s[k]);
     }
-    // if((m+r-s[k]>=d) && (m+s[k+1] <=d)){ x[k]=0;
-    else{ 
+    if((m+r-s[k]>=d) && (m+s[k+1] <=d)){
+    // else{ 
         x[k]=0;
         sumofsub(m, k+1, r-s[k]);
     }
@@ -35,7 +35,7 @@ void inputarr(int arr[], int n){
 }
 int main() {
     int i, n, sum=0;
-    printf("Enterthe number of elements:");
+    printf("Enter the number of elements:");
     scanf("%d", &n);
     printf("Enter the elements: ");
     inputarr(s, n);
