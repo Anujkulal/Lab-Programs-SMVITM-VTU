@@ -1,0 +1,27 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+\begin{document}
+\begin{center}
+\textbf{\large Equations in \LaTeX}
+\end{center}
+\vspace{2cm}
+\begin{minipage}{0.48 \textwidth}
+\section*{Equation 1}
+\begin{align*}
+x &= \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}\\ 
+&= \frac{-2 \pm \sqrt{2^{2} - 4 \cdot (1) \cdot (3)}}{2 \cdot (1)}\\
+&= \frac{-2 \pm \sqrt{4 - 12}}{2}
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.48 \textwidth}
+\section*{Equation 2}
+\begin{align*}
+\varphi^{\lambda}_{\sigma} A_{t} &= \sum_{\pi \in C_{t}} sgn (\pi) \varphi^{\lambda}_{\sigma} \varphi^{\lambda}_{\pi}\\
+&= \sum_{\tau \in C_{\sigma t}} sgn(\sigma^{-1} \tau \sigma) \varphi^{\lambda}_{\sigma} \varphi^{\lambda}_{\sigma^{-1} \tau \sigma}\\
+&= A_{\sigma t} \varphi^{\lambda}_{\sigma}
+\end{align*}
+\end{minipage}
+\vspace{3cm}
+\end{document}
