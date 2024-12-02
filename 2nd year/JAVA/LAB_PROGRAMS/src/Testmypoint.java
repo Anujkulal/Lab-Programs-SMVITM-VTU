@@ -11,8 +11,9 @@ class Mypoint{
         this.x = x;
         this.y = y;
     }
-
+    
     public void setXY(int x, int y){
+        System.out.println(this.x);
         this.x = x;
         this.y = y;
     }
