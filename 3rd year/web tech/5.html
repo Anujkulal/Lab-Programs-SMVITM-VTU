@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            background-color: #2c8848;
+            color: white;
+            text-align: center;
+        }
+        header div{
+            height: 65%;
+            align-content: center;
+        }
+        nav{
+            width: 100%;
+            height: 35%;
+            background-color: #333;
+        }
+        ul li{
+            list-style: none;
+            margin: 0 20px;
+            padding: 10px 0;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article{
+            background-color: #c5c5c5;
+            margin: 10px;
+            padding: 10px;
+            line-height: 2;
+        }
+
+        .sec1{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            gap: 40px;
+        }
+
+        aside{
+            background-color: #c5c5c5;
+            padding: 10px;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px;
+        }
+        th, td{
+            padding: 10px;
+            border: 2px solid #333;
+        }
+
+        footer{
+            text-align: center;
+            background-color: #2c8848;
+            padding: 20px 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Daily News</h1>
+            <p>Your source for the latest updates</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>World</li>
+                <li>sports</li>
+                <li>Entertainment</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Breaking news: Technology Advamces</h2>
+            <p>The world of technology is evolving at the rapid pace</p>
+        </article>
+        <article>
+            <h2>Health: Tips for better Life</h2>
+            <p>Health is wealth</p>
+        </article>
+
+        <section class="sec1">
+            <figure>
+                <img src="sample.jpg" alt="" width="200">
+                <figcaption>Image: Latest News update</figcaption>
+            </figure>
+            <aside class="ads">
+                <h2>Advertisement</h2>
+                <p>Advertise here. get the latest gadgets Visit our store here</p>
+            </aside>
+        </section>
+
+        <table>
+
+            <caption>Latest Sports Scores</caption>
+
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Score</th>
+                    <th>Opponent</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>TeamA</td>
+                    <td>3</td>
+                    <td>TeamB</td>
+                </tr>
+                <tr>
+                    <td>TeamC</td>
+                    <td>2</td>
+                    <td>TeamD</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2021 Daily News. All rights reserved</p>
+    </footer>
+</body>
+</html>

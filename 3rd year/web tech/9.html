@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Scripts Tasks</title>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #d36b6b;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Append content</h1>
+    <p>This is an existing paragraph</p>
+    <button class="append">Append Content</button>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+
+    <h1>Animate Element</h1>
+    <div class="box"></div>
+    <button class="animateBox">Animate Box</button>
+
+    <script>
+        $(document).ready(function(){
+            let count = $('ul li').length; //init. with current number of list items
+            $('.append').click(function(){
+                count++;
+                $('p').append(`Appended text: ${count}`);
+                $('ul').append('<li>Item '+count+'</li>');
+            })
+        })
+
+        //Animate
+        // $document.ready(function(){
+            $('.animateBox').click(function(){
+                $('.box').css({
+                    width: '100px',
+                    height: '100px',
+                    backgroundColor: '#d36b6b'
+                }).animate({
+                    width: '300px',
+                    height: '300px',
+                }, 500, function(){
+                    $(this).css('backgroundColor', "#6bd3d3")
+                })
+            })
+        // })
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax and json Examples</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax without jquery</h1>
+    <button onclick="loadContent()">Load text content(No jquery)</button>
+    <p class="content-without-jquery">Content will load here</p>
+    <hr>
+
+    <h1>Ajax with jquery</h1>
+    <button class="loadjquery">Load text content(jquery)</button>
+    <p class="jquerycontent">Content will load here</p>
+    <hr>
+
+    <h1>getJSON() method</h1>
+    <button class="loadjson">Load JSON Data(jquery)</button>
+    <p class="jsoncontent">JSON data will load here</p>
+    <hr>
+
+    <h1>parseJSON() method</h1>
+    <button class="loadparsejson">parseJSON</button>
+    <p class="parsejsoncontent">parsed JSON will load here</p>
+    <hr>
+
+    <script>
+        function loadContent(){
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'sample.txt', true);
+            xhr.onload = function(){
+                if(this.status == 200){
+                    document.querySelector('.content-without-jquery').innerHTML = this.responseText;
+                }
+            }
+            xhr.send();
+        }
+
+        //Using jquery
+        $('.loadjquery').click(function(){
+            $.ajax({
+                url: 'sample.txt',
+                method: 'GET',
+                success: function(data){
+                    $('.jquerycontent').text(data);
+                }
+            })
+        })
+
+        //getJSON
+        $('.loadjson').click(function(){
+            $.getJSON('sample.json', function(data){
+                $('.jsoncontent').html(`
+                <p>Name: ${data.name}</p>
+                <p>Age: ${data.age}</p>
+                <p>city: ${data.city}</p>
+                `);
+            })
+        })
+
+        //parseJSON
+        $('.loadparsejson').click(function(){
+            const data = '{"name": "John", "age": 30, "city": "New York"}';
+            const parsedData = $.parseJSON(data);
+            $('.parsejsoncontent').html(`
+                <p>Name: ${parsedData.name}</p>
+                <p>Age: ${parsedData.age}</p>
+                <p>City: ${parsedData.city}</p>
+            `);
+        })
+
+    </script>
+</body>
+</html>

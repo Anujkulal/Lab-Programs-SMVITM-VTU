@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            width: 400px;
+            height: 700px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.788);
+        }
+
+        h2{
+            text-decoration: underline;
+        }
+
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        input, select{
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        input[type="checkbox"]{
+            cursor: pointer;
+        }
+        button{
+            padding: 10px;
+            border: 1px solid #298d26;
+            border-radius: 10px;
+            background-color: #1c9118;
+            color: #ffffff;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="firstname">First name:</label>
+                <input type="text" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last name:</label>
+                <input type="text" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Date Of Birth:</label>
+               <input type="date" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <div>
+                    <input type="checkbox" name="hobbies" value="sports"> sports
+                    <input type="checkbox" name="hobbies" value="music"> music
+                    <input type="checkbox" name="hobbies" value="reading"> Reading
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="profile">Profile Picture</label>
+                <input type="file" name="profile">
+            </div>
+            <div class="form-group">
+               <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
