@@ -31,8 +31,9 @@ plt.close()
 
 ```
 
-![[Pasted image 20250604092214.png]]
-![[Pasted image 20250604092234.png]]
+![demo](Pasted-image-20250604092214.png)
+
+![](Pasted-image-20250604092234.png)
 
 ---
 
@@ -72,8 +73,9 @@ plt.close()
 
 ```
 
-![[Pasted image 20250604092026.png]]
-![[Pasted image 20250604092140.png]]
+![](Pasted-image-20250604092026.png)
+
+![](Pasted-image-20250604092140.png)
 
 ---
 
@@ -123,7 +125,7 @@ plt.close()
 
 `Explained variance ratio: [0.92461872 0.05306648 0.01710261]`
 
-![[Pasted image 20250604092000.png]]
+![](Pasted-image-20250604092000.png)
 
 ---
 
@@ -248,7 +250,7 @@ plt.show()
 
 `1.0`
 
-![[Pasted image 20250604091853.png]]
+![](Pasted-image-20250604091853.png)
 
 ---
 
@@ -293,7 +295,7 @@ plt.legend()
 plt.show()
 ```
 
-![[Pasted image 20250604091822.png]]
+![](Pasted-image-20250604091822.png)
 
 ---
 
@@ -345,7 +347,7 @@ The predicted diagnosis for the new sample is: M
 `R^2 score:0.40`
 `Mean squared error:53.87`
 
-![[Pasted image 20250604091619.png]]
+![](Pasted-image-20250604091619.png)
 
 ### Part 2: Polynomial Regression on Auto MPG Dataset (from hard drive)
 
@@ -395,7 +397,7 @@ plt.show()
 `R² Score: 0.57`
 `MSE: 23.79`
 
-![[Pasted image 20250604091751.png]]
+![](Pasted-image-20250604091751.png)
 
 ---
 
@@ -441,7 +443,7 @@ print(f"The predicted diagnosis for the new sample is: {prediction[0]}")
 ```
 
 `Model Accuracy on Test Data: 0.95`
-![[Pasted image 20250604091541.png]]
+![](Pasted-image-20250604091541.png)
 `The predicted diagnosis for the new sample is: M`
 
 ---
@@ -525,6 +527,6 @@ plt.show()
 
 ```
 `
-![[Pasted image 20250604091308.png]]
+![](Pasted-image-20250604091308.png)
 
 ---
