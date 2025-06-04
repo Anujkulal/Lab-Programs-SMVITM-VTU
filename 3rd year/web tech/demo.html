@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+    <h2>Append Text</h2>
+    <p>This is an existing paragraph</p>
+    <button id="append">Append</button>
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+    </ul>
+    <br> <br> <br>
+    <h2>Animate element</h2>
+    <button id="animate">Animate</button>
+    <div class="box" style="width: 100px;height: 100px; background-color: #cfcaca;">
+    </div>
+    
+    <script>
+        // $(document).ready(function(){
+            let itemcnt = $('ul li').length;
+            $('#append').click(function(){
+                itemcnt++;
+                $('p').append(`Appended item${itemcnt}`)
+                $('ul').append(`<li>Item${itemcnt}</li>`)
+            })
+        // })
+
+        $('#animate').click(function(){
+            $('.box').css({width: '100px', height: '100px', backgroundColor: '#cfcaca'})
+            .animate({width: '150px', height: '150px'}, 500, function(){
+                $(this).css('backgroundColor', '#776565')
+            })
+        })
+    </script>
+</body>
+</html>
