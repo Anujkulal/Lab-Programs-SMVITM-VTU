@@ -343,8 +343,11 @@ The predicted diagnosis for the new sample is: M
 ```
 
 `Intercept:-35.17`
+
 `Coefficients:9.17`
+
 `R^2 score:0.40`
+
 `Mean squared error:53.87`
 
 ![](assets/Pasted-image-20250604091619.png)
@@ -394,7 +397,9 @@ plt.show()
 ```
 
 `=== Polynomial Regression on Auto MPG Dataset ===`
+
 `R² Score: 0.57`
+
 `MSE: 23.79`
 
 ![](assets/Pasted-image-20250604091751.png)
@@ -409,26 +414,35 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 import matplotlib.pyplot as plt
+
 # Step 1: Load the dataset
 data = pd.read_csv(r'WBCD.csv')
+
 # Step 2: Clean the dataset
 # Drop 'id' column and any unnamed columns if present
 data = data.drop(columns=[col for col in data.columns if 'Unnamed' in col or col == 'id'])
+
 # Step 3: Prepare features and labels
 X = data.drop('diagnosis', axis=1) # Features
 y = data['diagnosis'] # Target
+
 # Step 4: Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 # Step 5: Build and train the Decision Tree model
 clf = DecisionTreeClassifier(criterion='gini', random_state=42)
 clf.fit(X_train, y_train)
+
 # Step 6: Evaluate model accuracy
 accuracy = clf.score(X_test, y_test)
 print(f"Model Accuracy on Test Data: {accuracy:.2f}")
+
 # Step 7: Visualize the Decision Tree
 plt.figure(figsize=(20,10))
 plot_tree(clf, feature_names=X.columns, class_names=['Benign', 'Malignant'], filled=True)
 plt.show()
+
+
 # Step 8: Classify a new sample
 # Important: new_sample must be a DataFrame with same columns as training features
 import numpy as np
@@ -526,7 +540,7 @@ plt.tight_layout()
 plt.show()
 
 ```
-`
+
 ![](assets/Pasted-image-20250604091308.png)
 
 ---
