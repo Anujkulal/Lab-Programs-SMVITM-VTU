@@ -506,7 +506,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plst
 import seaborn as sns
 
 # Step 1: Load the dataset from local CSV file
